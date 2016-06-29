@@ -3,6 +3,7 @@ module SlackBot
     class Calculate < SlackRubyBot::Commands::Base
       command 'calculate' do |client, data, _match|
         client.say(channel: data.channel, text: '4')
+
       end
 
       command 'hi' do |client, data, _match|
@@ -10,7 +11,9 @@ module SlackBot
       end
 
       command 'Who is the King?' do |client, data, _match|
-        client.say(channel: data.channel, text: 'Hogy is the King')
+        resp = YelpIntegration::Client.query("San Francisco", {:term => 'food'})
+
+        client.say(channel: data.channel, text: resp.to_s)
       end
     end
   end

@@ -22,5 +22,10 @@ module HAL9000
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.autoload_paths += %w(
+        lib
+        lib/yelp_integration
+    ).map { |p| File.join(Rails.root, p) }
   end
 end
