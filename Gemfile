@@ -28,7 +28,12 @@ gem 'slack-ruby-bot'
 gem 'puma'
 gem 'sinatra'
 gem 'dotenv'
+
+# concurrency
 gem 'celluloid-io'
+
+# yelp query api
+gem 'yelp', require: 'yelp'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
