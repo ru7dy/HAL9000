@@ -28,6 +28,7 @@ gem 'slack-ruby-bot'
 gem 'puma'
 gem 'sinatra'
 gem 'dotenv'
+gem 'celluloid-io'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
