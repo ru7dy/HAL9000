@@ -1,4 +1,4 @@
 module SlackBot
-	class Bot < SlackRubyBot::Bot
+  class Bot < SlackRubyBot::Bot
   end
 end
