@@ -13,14 +13,14 @@ module FaceplusIntegration
 
     EXAMPLE_URL = 'http://vis-www.cs.umass.edu/lfw/images/Angela_Bassett/Angela_Bassett_0001.jpg'
 
-    def self.query(city, params)
-      url = "#{ENDPOINT}?api_key=#{API_KEY}&api_secret=#{API_SECRET}&url=#{EXAMPLE_URL}"
+    def self.query(params)
+      url = "#{ENDPOINT}?api_key=#{API_KEY}&api_secret=#{API_SECRET}&url=#{params[:image_url]}"
       url = URI.parse(url)
       req = Net::HTTP::Get.new(url.to_s)
       res = Net::HTTP.start(url.host, url.port) { |http|
         http.request(req)
       }
-      res.body
+      JSON.parse(res.body)
     end
   end
 end
