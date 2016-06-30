@@ -25,6 +25,7 @@ module HAL9000
 
     config.autoload_paths += %w(
         lib
+        lib/faceplus_integration
         lib/yelp_integration
     ).map { |p| File.join(Rails.root, p) }
   end
