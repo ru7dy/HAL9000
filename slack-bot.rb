@@ -1,4 +1,5 @@
 require 'slack-ruby-bot'
-require 'slack-bot/commands/calculate'
+require 'slack-bot/commands/talk'
 require 'slack-bot/commands/weather'
+require 'slack-bot/commands/yelpify'
 require 'slack-bot/bot'

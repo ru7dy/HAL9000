@@ -10,10 +10,11 @@ module YelpIntegration
                                   token_secret: 'Ti0kfu0begnJglPCaK-CpUvov8s'
                                 })
       city ||= 'San Francisco'
-      params['term'] ||= 'food'
-      params['limit'] ||= 5
+      params[:term] ||= 'food'
+      params[:limit] ||= 10
+      params[:sort] ||= 2
       response = client.search(city, params)
-      response.businesses.join(',')
+      response.businesses.map(&:url)
     end
   end
 end
