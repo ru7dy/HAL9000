@@ -3,7 +3,6 @@ require 'yelp'
 
 module YelpIntegration
   class Client
-
     def self.query(city, params)
       client = Yelp::Client.new({ consumer_key: 'KH7e0YJNALkAqjch2X3r-g',
                                   consumer_secret: 'J6Lu5DBor5HQHT4VSipFqm6LRVc',
@@ -18,8 +17,6 @@ module YelpIntegration
       response.businesses.map(&:url)
     end
   end
-
-
 end
 
 
