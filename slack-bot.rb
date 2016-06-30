@@ -1,5 +1,6 @@
 require 'slack-ruby-bot'
 require 'slack-bot/commands/airface'
+require 'slack-bot/commands/bingify'
 require 'slack-bot/commands/faceify'
 require 'slack-bot/commands/talk'
 require 'slack-bot/commands/weather'
