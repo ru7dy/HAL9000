@@ -60,7 +60,7 @@ module BingIntegration
       # Request body
       request.body = JSON.generate(
         {
-          "url" => bing_url,
+          "url" => params[:query],
         }
       )
       #request.body = JSON.generate( {"url" => EXAMPLE_URL})
