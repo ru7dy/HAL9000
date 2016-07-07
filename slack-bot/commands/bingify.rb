@@ -1,7 +1,7 @@
 module SlackBot
   module Commands
     class Bingify < SlackRubyBot::Bot
-      match /^bingify (?<query>\w*)$/ do |client, data, match|
+      match /^bingify (?<query>.*)$/ do |client, data, match|
         resp = BingIntegration::Client.image_search(
             {
               :query => "#{match[:query]}",
