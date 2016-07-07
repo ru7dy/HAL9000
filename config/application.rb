@@ -27,6 +27,7 @@ module HAL9000
         lib
         lib/airface_integration
         lib/faceplus_integration
+        lib/helper
         lib/yelp_integration
     ).map { |p| File.join(Rails.root, p) }
   end
